@@ -162,8 +162,8 @@ exports['qb-target']:AddBoxZone("Tower2", vector3(102.31, -367.23, 55.5), 1.1, 1
   distance = 2.5,
 })
 -- Tower 3
-exports['qb-target']:AddBoxZone("Tower2", vector3(72.48, -338.59, 55.51), 0.5, 1.5, { 
-  name = "Tower2",
+exports['qb-target']:AddBoxZone("Tower3", vector3(72.48, -338.59, 55.51), 0.5, 1.5, { 
+  name = "Tower3",
   heading = 160,
   debugPoly = false,
   minZ=52.91,
