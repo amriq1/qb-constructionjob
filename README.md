@@ -2,7 +2,7 @@
 A pretty simple qb-constructionjob
 
 ## Dependency
-[cd-keymaster]: https://github.com/dsheedes/cd_keymaster
+https://github.com/dsheedes/cd_keymaster
 
 
 ## Installation
