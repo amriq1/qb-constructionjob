@@ -21,6 +21,7 @@ Step #1: Go to your qb-core folder > shared > jobs.lua and paste this
 	},
   
   Step #2: Drop the qb-constructionjob into your [qb] folder
+  
   Step #3: Go to your server.cfg and ensure qb-constructionjob
   
   That's all.
