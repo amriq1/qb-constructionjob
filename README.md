@@ -1,6 +1,10 @@
 # qb-constructionjob
 A pretty simple qb-constructionjob
 
+## Dependency
+[cd-keymaster]: https://github.com/dsheedes/cd_keymaster
+
+
 ## Installation
 Step #1: Go to your qb-core folder > shared > jobs.lua and paste this
 
