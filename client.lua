@@ -53,7 +53,7 @@ local function spawnPeds()
                     {
                         type = "server",
                         event = "qb-constructionjob:server:pedJob",
-                        icon = "fa-solid fa-user-helmet-safety",
+                        icon = "fa-solid fa-briefcase",
                         label = "Get the job.",
                     }
                 },
@@ -62,16 +62,239 @@ local function spawnPeds()
         end
 end
 
+-- Tower 1
+local function targetZones()
+  exports['qb-target']:AddBoxZone("Tower1", vector3(105.79, -357.21, 55.4), 1.1, 1.5, { 
+    name = "Tower1",
+    heading = 339,
+    debugPoly = false,
+    minZ=53.05,
+    maxZ=57.05,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 2
+  exports['qb-target']:AddBoxZone("Tower2", vector3(102.31, -367.23, 55.5), 1.1, 1.5, { 
+    name = "Tower2",
+    heading = 209,
+    debugPoly = false,
+    minZ=53.1,
+    maxZ=57.1,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 3
+  exports['qb-target']:AddBoxZone("Tower3", vector3(72.48, -338.59, 55.51), 0.5, 1.5, { 
+    name = "Tower3",
+    heading = 160,
+    debugPoly = false,
+    minZ=52.91,
+    maxZ=56.91,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 4
+  exports['qb-target']:AddBoxZone("Tower4", vector3(50.68, -346.79, 55.51), 2.1, 1.5, { 
+    name = "Tower4",
+    heading = 70,
+    debugPoly = false,
+    minZ=53.91,
+    maxZ=57.91,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 5
+  exports['qb-target']:AddBoxZone("Tower5", vector3(91.89, -362.92, 67.31), 2.7, 1.5, { 
+    name = "Tower5",
+    heading = 340,
+    debugPoly = false,
+    minZ=65.51,
+    maxZ=69.51,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 6
+  exports['qb-target']:AddBoxZone("Tower6", vector3(109.32, -380.02, 67.31), 2.3, 1.5, { 
+    name = "Tower6",
+    heading = 75,
+    debugPoly = false,
+    minZ=66.31,
+    maxZ=69.11,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 7
+  exports['qb-target']:AddBoxZone("Tower7", vector3(123.19, -342.02, 68.42), 2.5, 1.5, { 
+    name = "Tower7",
+    heading = 75,
+    debugPoly = false,
+    minZ=66.62,
+    maxZ=74.02,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+  -- Tower 8
+  exports['qb-target']:AddBoxZone("Tower8", vector3(102.02, -334.08, 68.42), 2.5, 1.5, { 
+    name = "Tower8",
+    heading = 70,
+    debugPoly = false,
+    minZ=66.22,
+    maxZ=73.82,
+  }, {
+    options = {
+      {
+        type = "client",
+        event = "qb-constructionjob:client:startWorking",
+        icon = "fa-solid fa-hammer",
+        label = "Start Working",
+        action = function(entity)
+          if IsPedAPlayer(entity) then return false end
+          TriggerEvent('qb-constructionjob:client:startWorking')
+        end,
+        canInteract = function(entity, distance, data)
+          if IsPedAPlayer(entity) then return false end
+          return true
+        end,
+        job = Config.Job,
+      }
+    },
+    distance = 2.5,
+  })
+end
+
+
 -- Events
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     PlayerData = QBCore.Functions.GetPlayerData()
+    spawnPeds()
+    targetZones()
 end)
 
 AddEventHandler('onResourceStart', function(resource)
     if GetCurrentResourceName() == resource then
         spawnPeds()
+        targetZones()
     end
 end)
 
@@ -107,219 +330,3 @@ RegisterNetEvent('qb-constructionjob:client:startWorking', function()
 end)
 
 
--- Tower 1
-exports['qb-target']:AddBoxZone("Tower1", vector3(105.79, -357.21, 55.4), 1.1, 1.5, { 
-  name = "Tower1",
-  heading = 339,
-  debugPoly = false,
-  minZ=53.05,
-  maxZ=57.05,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 2
-exports['qb-target']:AddBoxZone("Tower2", vector3(102.31, -367.23, 55.5), 1.1, 1.5, { 
-  name = "Tower2",
-  heading = 209,
-  debugPoly = false,
-  minZ=53.1,
-  maxZ=57.1,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 3
-exports['qb-target']:AddBoxZone("Tower3", vector3(72.48, -338.59, 55.51), 0.5, 1.5, { 
-  name = "Tower3",
-  heading = 160,
-  debugPoly = false,
-  minZ=52.91,
-  maxZ=56.91,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 4
-exports['qb-target']:AddBoxZone("Tower4", vector3(50.68, -346.79, 55.51), 2.1, 1.5, { 
-  name = "Tower4",
-  heading = 70,
-  debugPoly = false,
-  minZ=53.91,
-  maxZ=57.91,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 5
-exports['qb-target']:AddBoxZone("Tower5", vector3(91.89, -362.92, 67.31), 2.7, 1.5, { 
-  name = "Tower5",
-  heading = 340,
-  debugPoly = false,
-  minZ=65.51,
-  maxZ=69.51,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 6
-exports['qb-target']:AddBoxZone("Tower6", vector3(109.32, -380.02, 67.31), 2.3, 1.5, { 
-  name = "Tower6",
-  heading = 75,
-  debugPoly = false,
-  minZ=66.31,
-  maxZ=69.11,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 7
-exports['qb-target']:AddBoxZone("Tower7", vector3(123.19, -342.02, 68.42), 2.5, 1.5, { 
-  name = "Tower7",
-  heading = 75,
-  debugPoly = false,
-  minZ=66.62,
-  maxZ=74.02,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
--- Tower 8
-exports['qb-target']:AddBoxZone("Tower8", vector3(102.02, -334.08, 68.42), 2.5, 1.5, { 
-  name = "Tower8",
-  heading = 70,
-  debugPoly = false,
-  minZ=66.22,
-  maxZ=73.82,
-}, {
-  options = {
-    {
-      type = "client",
-      event = "qb-constructionjob:client:startWorking",
-      icon = "fa-solid fa-hammer-crash",
-      label = "Start Working",
-      action = function(entity)
-        if IsPedAPlayer(entity) then return false end
-        TriggerEvent('qb-constructionjob:client:startWorking')
-      end,
-      canInteract = function(entity, distance, data)
-        if IsPedAPlayer(entity) then return false end
-        return true
-      end,
-      job = Config.Job,
-    }
-  },
-  distance = 2.5,
-})
